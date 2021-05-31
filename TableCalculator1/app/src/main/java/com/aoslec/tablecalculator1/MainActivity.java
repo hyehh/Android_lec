@@ -77,29 +77,34 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            num1 = Integer.parseInt(edit1.getText().toString());
-            num2 = Integer.parseInt(edit2.getText().toString());
 
-            switch (v.getId()){
-                case R.id.btnPlus:
-                    if(edit1.getText().toString().equals("") || edit2.getText().toString().equals("")){
-                        Toast.makeText(MainActivity.this, "값을 먼저 입력해주세요!", Toast.LENGTH_SHORT).show();
-                        break;
-                    }else {
+            if(edit1.getText().toString().equals("") || edit2.getText().toString().equals("")){
+                Toast.makeText(MainActivity.this, "값을 먼저 입력해주세요!", Toast.LENGTH_SHORT).show();
+            }else{
+                num1 = Integer.parseInt(edit1.getText().toString());
+                num2 = Integer.parseInt(edit2.getText().toString());
+
+                switch (v.getId()){
+                    case R.id.btnPlus:
                         result = Integer.toString(num1 + num2);
                         break;
-                    }
-                case R.id.btnMinus:
-                    result = Integer.toString(num1 - num2);
-                    break;
-                case R.id.btnMul:
-                    result = Integer.toString(num1 * num2);
-                    break;
-                case R.id.btnDiv:
-                    result = Double.toString(num1 / (double)num2);
-                    break;
+                    case R.id.btnMinus:
+                        result = Integer.toString(num1 - num2);
+                        break;
+                    case R.id.btnMul:
+                        result = Integer.toString(num1 * num2);
+                        break;
+                    case R.id.btnDiv:
+                        if(num1 == 0 || num2 ==0){
+                            Toast.makeText(MainActivity.this, "0을 나눌 수 없습니다!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            result = Double.toString(num1 / (double)num2);
+                        }
+                        break;
+                }
+                textResult.setText("계산결과 : " + result);
             }
-            textResult.setText("계산결과 : " + result);
         }
     };
+
 }
