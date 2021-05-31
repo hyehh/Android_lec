@@ -7,14 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/edit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="정렬 테스트"
-        android:textSize="30dp"
-        android:textColor="#ff0000"
-        android:background="#ffff00"
-        android:gravity="center_vertical|right"
-     />
+        android:layout_height="wrap_content"
+        android:hint="여기에 입력"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력"
+        />
 
 </LinearLayout>
