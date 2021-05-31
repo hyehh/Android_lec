@@ -1,0 +1,2 @@
+rootProject.name = "FrameTest3"
+include ':app'
