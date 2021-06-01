@@ -21,6 +21,7 @@
             />
 
         <CheckBox
+            android:id="@+id/cb_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="시작함"
@@ -29,10 +30,48 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layoutSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="좋아하는 애완동물은?"
+            android:textSize="20dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/rg_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="강아지"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="고양이"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="토끼"
+                />
+
+        </RadioGroup>
 
         <Button
             android:id="@+id/check"
@@ -44,7 +83,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/dog"
+        android:id="@+id/layoutThird"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -60,10 +99,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/dog"
+                android:maxHeight="1000px"
+                android:maxWidth="700px"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/imageCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cat"
+                android:maxHeight="1000px"
+                android:maxWidth="700px"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/imageRabbit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rabbit"
+                android:maxHeight="1000px"
+                android:maxWidth="700px"
+                android:adjustViewBounds="true"
                 android:visibility="invisible"
                 />
 
         </FrameLayout>
+
 
     </LinearLayout>
 

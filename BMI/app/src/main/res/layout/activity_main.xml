@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/firstLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나의 BMI 지수는?"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="#E3DDDD"
+            android:textColor="#5A5555"
+            android:padding="10dp"
+            android:fontFamily="casual"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main"
+            android:maxWidth="700px"
+            android:maxHeight="700px"
+            android:adjustViewBounds="true"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:id="@+id/mainBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E3DDDD"
+            android:textColor="#5A5555"
+            android:textSize="25dp"
+            android:text="BMI 지수 알아보기"
+            android:fontFamily="casual"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위 버튼을 클릭하여 BMI 지수에 대해 자세히 알아보세요!"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:textColor="#8E8A8A"
+            android:padding="5dp"
+            android:fontFamily="casual"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI 지수란?"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="#E3DDDD"
+            android:textColor="#5A5555"
+            android:padding="10dp"
+            android:fontFamily="casual"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="BMI 지수는 당신의 비만도를 확인하는 지표입니다."
+            android:layout_margin="10dp"
+            android:paddingTop="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="BMI 지수는 세계적으로 공인된 지수입니다."
+            android:layout_margin="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="BMI 지수는 몸무게를 키의 제곱으로 나눈 값입니다."
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="지금 바로 당신의 키와 몸무게로의 간단하게"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="나의 BMI를 확인해 보세요!"
+            android:layout_margin="10dp"
+            android:paddingBottom="25dp"
+            />
+
+        <Button
+            android:id="@+id/Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E3DDDD"
+            android:textColor="#5A5555"
+            android:textSize="25dp"
+            android:text="나의 BMI 지수 계산하기"
+            android:fontFamily="casual"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위 버튼을 클릭하여 BMI 지수에 대해 자세히 알아보세요!"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:textColor="#8E8A8A"
+            android:padding="5dp"
+            android:fontFamily="casual"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI 계산기"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="#D5B3B3"
+            android:textColor="#5A5555"
+            android:padding="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성별을 선택하세요 : "
+            android:textSize="25dp"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</FrameLayout>

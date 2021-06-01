@@ -31,42 +31,73 @@ public class MainActivity extends AppCompatActivity {
     } // onCreate
 
     CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+        // onCheckedChanged 에 넣으면 휘발성이기 때문에 값을 기억 못함! 그래서 그 위에 전역변수로 써줘야함!
+        ArrayList<String> arrayList = new ArrayList<String>();
+
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             String str = ""; // 화면에 toast로 보여주기 위한 string (글자 합할 것임)
-            ArrayList<String> arrayList = new ArrayList<String>();
+//            String str1 = "운동";
+//            String str2 = "요리";
+//            String str3 = "독서";
+//            String str4 = "여행";
 //            arrayList.add("운동"); // 이게 0번째 인덱스
 //            arrayList.add("요리"); // 이게 1번째 인덱스
 //            arrayList.add("독서"); // 이게 2번째 인덱스
 //            arrayList.add("여행"); // 이게 3번째 인덱스
 
-
-            if(cb1.isChecked() == true){
-                arrayList.add("운동");
-            }else {
-                arrayList.remove(0);
+            if(buttonView.getId() == R.id.cb_01){
+                if(isChecked==true){
+                    arrayList.add("운동");
+                }else {
+                    arrayList.remove("운동");
+                }
             }
 
-            if(cb2.isChecked() == true){
-                arrayList.add("요리");
-            }else {
-                arrayList.remove(1);
+            if(buttonView.getId() == R.id.cb_02){
+                if(isChecked==true){
+                    arrayList.add("요리");
+                }else {
+                    arrayList.remove("요리");
+                }
             }
 
-            if(cb3.isChecked() == true){
-                arrayList.add("독서");
-            }else {
-                arrayList.remove(2);
+            if(buttonView.getId() == R.id.cb_03){
+                if(isChecked==true){
+                    arrayList.add("독서");
+                }else {
+                    arrayList.remove("독서");
+                }
             }
 
-            if(cb4.isChecked() == true){
-                arrayList.add("여행");
-            }else {
-                arrayList.remove(3);
+            if(buttonView.getId() == R.id.cb_04){
+                if(isChecked==true){
+                    arrayList.add("여행");
+                }else {
+                    arrayList.remove("여행");
+                }
             }
+
+//            if(cb2.isChecked() == true){
+//                arrayList.add("요리");
+//            }else {
+//                arrayList.remove("요리");
+//            }
+//
+//            if(cb3.isChecked() == true){
+//                arrayList.add("독서");
+//            }else {
+//                arrayList.remove("독서");
+//            }
+//
+//            if(cb4.isChecked() == true){
+//                arrayList.add("여행");
+//            }else {
+//                arrayList.remove("여행");
+//            }
 
             for(int i=0; i<arrayList.size(); i++){
-                str += arrayList.get(i);
+                str = str + arrayList.get(i);
             }
 
             // v.getId() c처럼 CompoundButton buttonView 여기서 가져온 buttonView 사용하면 됨!
