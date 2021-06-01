@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1234567890"
+        />
+
+    <Button
+        android:id="@+id/btnIns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3AAAA"
+        android:textColor="@color/black"
+        android:text="INS"
+        />
+
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3AAAA"
+        android:textColor="@color/black"
+        android:text="DEL"
+        />
+
+    <Button
+        android:id="@+id/btnApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3AAAA"
+        android:textColor="@color/black"
+        android:text="APP"
+        />
+
+    <Button
+        android:id="@+id/btnRep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3AAAA"
+        android:textColor="@color/black"
+        android:text="REP"
+        />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B3AAAA"
+        android:textColor="@color/black"
+        android:text="CLEAR"
+        />
+
+</LinearLayout>
