@@ -1,4 +1,4 @@
-package com.aoslec.optionmenu;
+package com.aoslec.actionbar;
 
 import android.os.Bundle;
 
@@ -6,7 +6,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.SubMenu;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -14,13 +13,16 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.aoslec.optionmenu.databinding.ActivityMainBinding;
+import com.aoslec.actionbar.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView textView;
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+        textView = findViewById(R.id.tv_01);
 
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 //        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -50,12 +53,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-        MenuItem item = menu.add(0,1,0,"짜장");
-        menu.add(0,2,0,"짬뽕");
-        SubMenu etc = menu.addSubMenu("기타");
-        etc.add(0,3,0,"우동");
-        etc.add(0,4,0,"만두");
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -64,25 +62,20 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-
         switch (item.getItemId()){
-            // 1번 짜장 - > 아이템 아이디
-            case 1:
-                Toast.makeText(this, "짜장은 달콤해", Toast.LENGTH_SHORT).show();
-                return true;
-            case 2:
-                Toast.makeText(this, "짬뽕은 달콤해", Toast.LENGTH_SHORT).show();
-                return true;
-            case 3:
-                Toast.makeText(this, "우동은 달콤해", Toast.LENGTH_SHORT).show();
-                return true;
-            case 4:
-                Toast.makeText(this, "만두은 달콤해", Toast.LENGTH_SHORT).show();
-                // return 이 있기 때문에 break 필요 없음
-                return true;
+            case R.id.action_menu_01:
+                Toast.makeText(this,"action_menu_01", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_menu_02:
+                Toast.makeText(this,"action_menu_02",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_menu_03:
+                Toast.makeText(this,"action_menu_03",Toast.LENGTH_SHORT).show();
+                break;
         }
-        // 다른 곳 누르면 false가 나옴
-        return false;
+        // break 끝나고 여기로 와서 텍스트뷰 글자도 바꿈
+        textView.setText(item.getTitle().toString());
+        return true;
     }
 
     @Override

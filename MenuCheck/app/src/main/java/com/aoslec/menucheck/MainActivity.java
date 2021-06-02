@@ -1,12 +1,12 @@
-package com.aoslec.optionmenu;
+package com.aoslec.menucheck;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.SubMenu;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -14,16 +14,18 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.aoslec.optionmenu.databinding.ActivityMainBinding;
+import com.aoslec.menucheck.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+        // 버튼 연결
+        button = findViewById(R.id.button);
 
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 //        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -50,12 +54,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-        MenuItem item = menu.add(0,1,0,"짜장");
-        menu.add(0,2,0,"짬뽕");
-        SubMenu etc = menu.addSubMenu("기타");
-        etc.add(0,3,0,"우동");
-        etc.add(0,4,0,"만두");
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    // 생성해주기 - 옵션 메뉴가 클릭되기 전에 준비하는 것
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        // 버튼의 텍스트 컬러를 받아서 무조건 정수로 관리
+        int color = button.getTextColors().getDefaultColor();
+        if (color == Color.RED){
+            menu.findItem(R.id.red).setChecked(true);
+        }
+        if (color == Color.GREEN){
+            menu.findItem(R.id.green).setChecked(true);
+        }
+        if (color == Color.BLUE){
+            menu.findItem(R.id.blue).setChecked(true);
+        }
+        // boolean 값으로 리턴
         return true;
     }
 
@@ -66,22 +83,17 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
 
         switch (item.getItemId()){
-            // 1번 짜장 - > 아이템 아이디
-            case 1:
-                Toast.makeText(this, "짜장은 달콤해", Toast.LENGTH_SHORT).show();
+            case R.id.red:
+                button.setTextColor(Color.RED);
                 return true;
-            case 2:
-                Toast.makeText(this, "짬뽕은 달콤해", Toast.LENGTH_SHORT).show();
+            case R.id.green:
+                button.setTextColor(Color.GREEN);
                 return true;
-            case 3:
-                Toast.makeText(this, "우동은 달콤해", Toast.LENGTH_SHORT).show();
-                return true;
-            case 4:
-                Toast.makeText(this, "만두은 달콤해", Toast.LENGTH_SHORT).show();
-                // return 이 있기 때문에 break 필요 없음
+            case R.id.blue:
+                button.setTextColor(Color.BLUE);
                 return true;
         }
-        // 다른 곳 누르면 false가 나옴
+
         return false;
     }
 
