@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="위 버튼을 클릭하여 BMI 지수에 대해 자세히 알아보세요!"
-            android:textSize="10dp"
+            android:textSize="13dp"
             android:gravity="center"
             android:textColor="#8E8A8A"
             android:padding="5dp"
@@ -152,7 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="위 버튼을 클릭하여 나의 BMI를 확인해보세요!"
-            android:textSize="10dp"
+            android:textSize="13dp"
             android:gravity="center"
             android:textColor="#8E8A8A"
             android:padding="5dp"
@@ -257,7 +257,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="위 버튼을 클릭한 후, 잠시만 기다려주세요!"
-            android:textSize="10dp"
+            android:textSize="13dp"
             android:gravity="center"
             android:textColor="#8E8A8A"
             android:padding="5dp"
@@ -354,6 +354,14 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/range"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            />
+
         <Button
             android:id="@+id/FourthBtn"
             android:layout_width="wrap_content"
@@ -363,9 +371,345 @@
             android:textSize="25dp"
             android:text="결과에 대한 정보 알아보기"
             android:fontFamily="casual"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_result_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="정상 체중인 당신!"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:background="#E3DDDD"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:layout_marginBottom="50dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="당신의 목표는 체형 개선입니다."
+                android:layout_margin="10dp"
+                android:paddingTop="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체형 개선에 도움을 주는 운동을 추천합니다!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="https://brunch.co.kr/@tenbody/2117"
+                android:layout_margin="10dp"
+                android:autoLink="web"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="해당 사이트를 방문해 추천 운동을 살펴보세요!"
+                android:layout_margin="10dp"
+                android:paddingBottom="25dp"
+                />
+
+            <Button
+                android:id="@+id/resetBtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E3DDDD"
+                android:textColor="#5A5555"
+                android:textSize="25dp"
+                android:text="다시 계산하기"
+                android:fontFamily="casual"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_result_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저체중인 당신!"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:background="#E3DDDD"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:layout_marginBottom="50dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="당신의 목표는 체성분 및 체형 개선입니다."
+                android:layout_margin="10dp"
+                android:paddingTop="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체중 감량의 욕심을 버리고 근육량 증가에 집중하세요!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체형 개선에 도움을 주는 운동과 식단 추천합니다!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="https://ko.wikihow.com/건강하게-체중-증가시키는-법"
+                android:layout_margin="9dp"
+                android:autoLink="web"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="해당 사이트를 방문해 추천 운동과 식단을 살펴보세요!"
+                android:layout_margin="10dp"
+                android:paddingBottom="25dp"
+                />
+
+            <Button
+                android:id="@+id/resetBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E3DDDD"
+                android:textColor="#5A5555"
+                android:textSize="25dp"
+                android:text="다시 계산하기"
+                android:fontFamily="casual"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_result_03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="과체중인 당신!"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:background="#E3DDDD"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:layout_marginBottom="50dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="당신의 목표는 체중 조절과 체형 개선입니다."
+                android:layout_margin="10dp"
+                android:paddingTop="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체중 감량과 체형 개선을 위해 노력하세요!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체중 감량과 체중 개선을 위한 운동을 추천합니다!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="https://content.v.daum.net/v/59a39414ed94d200012be917"
+                android:layout_margin="9dp"
+                android:autoLink="web"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="해당 사이트를 방문해 추천 운동을 살펴보세요!"
+                android:layout_margin="10dp"
+                android:paddingBottom="25dp"
+                />
+
+            <Button
+                android:id="@+id/resetBtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E3DDDD"
+                android:textColor="#5A5555"
+                android:textSize="25dp"
+                android:text="다시 계산하기"
+                android:fontFamily="casual"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_result_04"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비만인 당신!"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:background="#E3DDDD"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:layout_marginBottom="50dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="당신의 목표는 체중 조절입니다."
+                android:layout_margin="10dp"
+                android:paddingTop="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="살찌는 식습관과 생활 악습을 개선하세요!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="체중 감량을 위한 방법을 추천합니다!"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="https://kienjstory.tistory.com/173"
+                android:layout_margin="9dp"
+                android:autoLink="web"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:text="해당 사이트를 방문해 추천 방법을 살펴보세요!"
+                android:layout_margin="10dp"
+                android:paddingBottom="25dp"
+                />
+
+            <Button
+                android:id="@+id/resetBtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E3DDDD"
+                android:textColor="#5A5555"
+                android:textSize="25dp"
+                android:text="다시 계산하기"
+                android:fontFamily="casual"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
 
 </FrameLayout>
