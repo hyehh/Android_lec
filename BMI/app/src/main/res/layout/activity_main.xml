@@ -71,7 +71,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="visible"
+        android:visibility="invisible"
         >
 
         <TextView
@@ -137,7 +137,7 @@
             />
 
         <Button
-            android:id="@+id/Btn"
+            android:id="@+id/SecondBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#E3DDDD"
@@ -151,7 +151,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="위 버튼을 클릭하여 BMI 지수에 대해 자세히 알아보세요!"
+            android:text="위 버튼을 클릭하여 나의 BMI를 확인해보세요!"
             android:textSize="10dp"
             android:gravity="center"
             android:textColor="#8E8A8A"
@@ -162,57 +162,105 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/thirdLinear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:visibility="invisible"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible"
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BMI 계산기"
+            android:text="나의 BMI 계산하기"
             android:textSize="40dp"
             android:gravity="center"
-            android:background="#D5B3B3"
+            android:background="#E3DDDD"
             android:textColor="#5A5555"
+            android:fontFamily="casual"
             android:padding="10dp"
+            android:layout_marginBottom="50dp"
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 키를 입력해주세요 : "
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="invisible"
-        >
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="키(cm)"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 몸무게를 입력해주세요 : "
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#5A5555"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                />
+
+            <EditText
+                android:id="@+id/editWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="몸무게(kg)"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ThirdBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E3DDDD"
+            android:textColor="#5A5555"
+            android:textSize="25dp"
+            android:text="계산하기"
+            android:fontFamily="casual"
+            android:layout_marginTop="50dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="성별을 선택하세요 : "
-            android:textSize="25dp"
+            android:text="위 버튼을 클릭한 후, 잠시만 기다려주세요!"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:textColor="#8E8A8A"
+            android:padding="5dp"
+            android:fontFamily="casual"
             />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="남"
-                />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="여" />
-
-        </RadioGroup>
 
     </LinearLayout>
 

@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearFirst, linearSecond;
-    Button mainBtn;
+    LinearLayout linearFirst, linearSecond, linearThird;
+    Button mainBtn, secondBtn, thirdBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
         linearFirst = findViewById(R.id.firstLinear);
         linearSecond = findViewById(R.id.secondLinear);
+        linearThird = findViewById(R.id.thirdLinear);
 
         mainBtn = findViewById(R.id.mainBtn);
+        secondBtn = findViewById(R.id.SecondBtn);
+        thirdBtn = findViewById(R.id.ThirdBtn);
 
         mainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,5 +33,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        secondBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearFirst.setVisibility(v.INVISIBLE);
+                linearSecond.setVisibility(v.INVISIBLE);
+                linearThird.setVisibility(v.VISIBLE);
+            }
+        });
     }
 }
