@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="invisible"
+        android:visibility="visible"
         >
 
         <TextView
@@ -206,6 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:inputType="number"
                 android:hint="키(cm)"
                 />
 
@@ -234,6 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:inputType="number"
                 android:hint="몸무게(kg)"
                 />
 
@@ -270,7 +272,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="visible"
+        android:visibility="invisible"
         >
 
         <TextView
@@ -359,7 +361,7 @@
             android:backgroundTint="#E3DDDD"
             android:textColor="#5A5555"
             android:textSize="25dp"
-            android:text="계산하기"
+            android:text="결과에 대한 정보 알아보기"
             android:fontFamily="casual"
             android:layout_marginTop="50dp"
             />
