@@ -53,6 +53,7 @@ public class WeatherAdapter extends BaseAdapter {
         // 데이터가 들어가는 방 만들기
         if(convertView == null){ // 제일 처음 시작은 무조건 null 값임! (계속 반복함)
             // 리스트 뷰에 쌓으려고 하는데 그 전에 장소를 세팅해주는 것임
+            // inflator 는 layout이 들어가는데 this.layout은 activity_main.xml을 의미함!
             convertView = inflater.inflate(this.layout, parent, false);
         }
         TextView tv_day = convertView.findViewById(R.id.tv_day);

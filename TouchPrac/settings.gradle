@@ -1,0 +1,2 @@
+rootProject.name = "TouchPrac"
+include ':app'

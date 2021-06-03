@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         // 버튼의 텍스트 컬러를 받아서 무조건 정수로 관리
         int color = button.getTextColors().getDefaultColor();
         if (color == Color.RED){
+            // res -> menu 의 menu 임! menu - group - item 이게 아님!
             menu.findItem(R.id.red).setChecked(true);
         }
         if (color == Color.GREEN){
