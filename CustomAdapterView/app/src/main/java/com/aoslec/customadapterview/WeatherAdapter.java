@@ -15,6 +15,7 @@ public class WeatherAdapter extends BaseAdapter {
     private Context mContext = null;
     // context 를 ACTIVITY 라고 생각해도 됨
     private int layout = 0;
+    // layout 은 숫자임!
     private ArrayList<Weater> data = null;
     private LayoutInflater inflater = null;
 
@@ -23,9 +24,11 @@ public class WeatherAdapter extends BaseAdapter {
         this.layout = layout;
         this.data = data;
         this.inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        // 레이아웃 안에 레이아웃 넣어준 걸 iflater (xml 파일 통째를 inflator 로 생각)
+        // 레이아웃 안에 레이아웃 넣어준 걸 iflater (xml 파일 통째를 inflator 로 생각) bean에 있는 데이터를 가져오는 게 inflator
+        // 위에 차곡차곡 쌓는 방식
     }
 
+    // BaseAdapter 만들었을 때 override 된 부분은 반드시 사용함
     @Override
     public int getCount() {
         // arraylist의 사이즈 / 몇 번 돌아라 주는 것
@@ -34,19 +37,22 @@ public class WeatherAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        // position 이 몇 번째를 클릭했는지 알려줄 것임
+        // 클릭했을 때 이 값을 가지고 뭘 하겠다는 것
+        // position 이 몇 번째를 클릭했는지 알려줄 것임 (0번 부터임)
         return data.get(position).getDay();
     }
 
     @Override
     public long getItemId(int position) {
+        // 위치를 가져온다
         return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // 데이터가 들어가는 방 만들기
-        if(convertView == null){
+        if(convertView == null){ // 제일 처음 시작은 무조건 null 값임! (계속 반복함)
+            // 리스트 뷰에 쌓으려고 하는데 그 전에 장소를 세팅해주는 것임
             convertView = inflater.inflate(this.layout, parent, false);
         }
         TextView tv_day = convertView.findViewById(R.id.tv_day);
@@ -61,6 +67,7 @@ public class WeatherAdapter extends BaseAdapter {
         // 홀짝 수로 색 바꿔주기
         if(position % 2 == 1){
             // 한 줄이 컨버트뷰다
+            // 0x = #이라고 생각하면 됨! (0x는 16진수임)
             convertView.setBackgroundColor(0x5000ff00);
         }else {
             convertView.setBackgroundColor(0x2000ff00);

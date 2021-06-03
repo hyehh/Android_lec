@@ -52,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_main, menu);
         MenuItem item = menu.add(0,1,0,"짜장");
+        // item 하나 만들어 주면 필요없음
         menu.add(0,2,0,"짬뽕");
         SubMenu etc = menu.addSubMenu("기타");
+        // submenu는 item은 아니니까 굳이 쓸 필요가 없다!
         etc.add(0,3,0,"우동");
         etc.add(0,4,0,"만두");
         return true;
