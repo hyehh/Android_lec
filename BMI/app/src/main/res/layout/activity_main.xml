@@ -167,7 +167,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="visible"
+        android:visibility="invisible"
         >
 
         <TextView
@@ -260,6 +260,108 @@
             android:textColor="#8E8A8A"
             android:padding="5dp"
             android:fontFamily="casual"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourthLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나의 BMI 결과"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:background="#E3DDDD"
+            android:textColor="#5A5555"
+            android:fontFamily="casual"
+            android:padding="10dp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 BMI 지수는 "
+                android:textSize="23dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.0"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 입니다!"
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신은 "
+                android:textSize="23dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 입니다!"
+                android:textSize="23dp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/FourthBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E3DDDD"
+            android:textColor="#5A5555"
+            android:textSize="25dp"
+            android:text="계산하기"
+            android:fontFamily="casual"
+            android:layout_marginTop="50dp"
             />
 
     </LinearLayout>

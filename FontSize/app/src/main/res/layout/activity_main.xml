@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="small font"
+        android:textColor="@color/black"
+        android:backgroundTint="#AEABAB"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="large font"
+        android:textColor="@color/black"
+        android:backgroundTint="#AEABAB"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
