@@ -1,11 +1,14 @@
 package com.aoslec.gridview;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CustomAdapter extends BaseAdapter {
 
@@ -14,6 +17,7 @@ public class CustomAdapter extends BaseAdapter {
     private int[] data;
 
     public CustomAdapter(Context mContext, int[] data) {
+        // Main에 mContext를 올리는 것
         this.mContext = mContext;
         this.data = data;
     }
@@ -47,6 +51,22 @@ public class CustomAdapter extends BaseAdapter {
         }
 
         imageView.setImageResource(data[position]);
+
+        // 이미지 크게 보여주기
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = View.inflate(mContext, R.layout.dialog, null);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(mContext);
+                ImageView ivDialog = dialogView.findViewById(R.id.ivDialog);
+                ivDialog.setImageResource(data[position]);
+
+                dlg.setTitle(" >>> 날씨 <<< ");
+                dlg.setView(dialogView);
+                dlg.setNegativeButton("닫기", null);
+                dlg.show();
+            }
+        });
 
         // return 값 view로 바꿔줘야 함!!!!!
         return imageView;

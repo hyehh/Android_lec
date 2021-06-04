@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.v("Message", "onCreate_Main");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -28,5 +30,35 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        Log.v("Message", "onStart_Main");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.v("Message", "onResume_Main");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.v("Message", "onPause_Main");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.v("Message", "onStop_Main");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.v("Message", "onDestroy_Main");
+        super.onDestroy();
     }
 }
