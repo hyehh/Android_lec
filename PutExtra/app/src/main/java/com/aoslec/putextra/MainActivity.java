@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, ThirdActivity.class);
                     intent.putExtra("userid", "admin");
                     intent.putExtra("password", 2222);
-                    // Rvalue는 리턴값 (startActivity + 값을 Rvalue에 넣어줘라고 요구 - 세번째 액티비티에서 보내준 Rvalue를 가져올 것임)
+                    // Rvalue는 리턴값 (startActivity + ReturnV 값을 Rvalue에 넣어줘라고 요구 - 세번째 액티비티에서 보내준 Rvalue를 가져올 것임)
                     startActivityForResult(intent, Rvalue);
                     break;
                 default:
