@@ -46,7 +46,7 @@ public class CustomAdapter extends BaseAdapter {
             imageView.setLayoutParams(new GridView.LayoutParams(100,100));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(5,5,5,5);
-        }else {
+        }else { // 만들어져 있으면 쓰지 말아라!
             imageView = (ImageView) convertView;
         }
 
