@@ -1,0 +1,2 @@
+rootProject.name = "Hybrid03"
+include ':app'
