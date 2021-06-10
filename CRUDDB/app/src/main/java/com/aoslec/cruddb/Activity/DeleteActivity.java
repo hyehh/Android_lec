@@ -2,6 +2,7 @@ package com.aoslec.cruddb.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -60,6 +61,16 @@ public class DeleteActivity extends AppCompatActivity {
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+//            new AlertDialog.Builder(DeleteActivity.this)
+//                    .setTitle("삭제")
+//                    .setMessage("정말 삭제하시겠습니다?")
+//                    .setIcon(R.mipmap.ic_launcher)
+//                    .setCancelable(false)
+//                    .setNegativeButton("아니오", null)
+//                    .setPositiveButton("네", )
+//                    .show();
+
             scode = ecode.getText().toString();
             sname = ename.getText().toString();
             sdept = edept.getText().toString();
