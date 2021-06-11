@@ -48,13 +48,13 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             webSettings.setBuiltInZoomControls(true);
             webSettings.setDisplayZoomControls(false);
 
-//            petView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    int position = getAdapterPosition();
-//                    Snackbar.make(petView, pets.get(position).getName() + " is Clicked!", Snackbar.LENGTH_SHORT).setAction("", null).show();
-//                }
-//            });
+            petView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Snackbar.make(petView, pets.get(position).getName() + " is Clicked!", Snackbar.LENGTH_SHORT).setAction("", null).show();
+                }
+            });
         }
     }
 
@@ -70,9 +70,9 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull PetAdapter.ViewHolder holder, int position) {
         Log.v("Message","hihi");
         holder.webView.loadData(htmlData(pets.get(position).getImages()), "text/html", "UTF-8");
-        holder.tv_name.setText(pets.get(position).getName());
-        holder.tv_age.setText(pets.get(position).getAge());
-        holder.tv_gender.setText(pets.get(position).getGender());
+        holder.tv_name.setText("Name : " + pets.get(position).getName());
+        holder.tv_age.setText("Age : " + pets.get(position).getAge());
+        holder.tv_gender.setText("Gender : " + pets.get(position).getGender());
     }
 
     @Override
@@ -88,7 +88,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
                 "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
                 "<title>Insert title here</title>\n" +
                 "</head>\n" +
-                "<body>\n <img src=\"http://192.168.0.128:8080/test/" +location+ "\"> </body>\n" +
+                "<body>\n <img src=\"http://192.168.0.2:8080/test/" +location+ "\" width =\"auto\" height=\"120%\"> </body>\n" +
                 "</html>";
         return htmlData;
     }

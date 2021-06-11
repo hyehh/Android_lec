@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    String urlAddr = "http://192.168.0.128:8080/test/pet.json";
+    String urlAddr = "http://192.168.0.2:8080/test/pet.json";
     Button button;
     RecyclerView recyclerView = null;
     RecyclerView.LayoutManager layoutManager = null;
