@@ -4,8 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.aoslec.cruddb.Bean.Student;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
