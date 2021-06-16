@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    >
+
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,27 +23,93 @@
         android:id="@+id/chip_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:singleLine="true"
+        app:singleSelection="false"
         >
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"/>
+            style="@style/CustomChipStyle"
+            android:text="test1"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"/>
+            style="@style/CustomChipStyle"
+            android:text="test2"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"/>
+            style="@style/CustomChipStyle"
+            android:text="test3"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test4"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test5"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test6"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test7"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test8"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomChipStyle"
+            android:text="test9"/>
 
     </com.google.android.material.chip.ChipGroup>
 
+    <Button
+        android:id="@+id/click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
 
 </LinearLayout>
+
+</HorizontalScrollView>
